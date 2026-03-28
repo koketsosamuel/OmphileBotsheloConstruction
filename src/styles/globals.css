@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: "Outfit", sans-serif;
+    color: #4A4E54;
+    background-color: #F5F2EC;
+  }
+}

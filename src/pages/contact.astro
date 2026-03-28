@@ -1,0 +1,259 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import CTABanner from '../components/CTABanner.astro';
+import { Phone, Mail, MapPin, MessageCircle, Send, ChevronDown, Info } from 'lucide-astro';
+---
+
+<Layout title="Contact Us" description="Get in touch with Omphile Botshelo Construction. Whether you represent a government department or a private enterprise, we're ready to discuss your next construction project.">
+
+  <!-- Navbar -->
+  <Navbar active="Contact" />
+
+  <!-- Hero -->
+  <section class="bg-obc-dark h-[260px] lg:h-[360px] px-6 lg:px-[120px] flex flex-col items-center justify-center gap-4 text-center">
+    <span class="text-obc-orange text-[13px] font-semibold tracking-[3px] uppercase">
+      GET IN TOUCH
+    </span>
+    <h1 class="font-heading text-obc-cream text-4xl lg:text-6xl text-center leading-tight max-w-[800px]">
+      Let's Build Something Together
+    </h1>
+    <div class="w-[60px] h-[3px] bg-obc-orange"></div>
+    <p class="text-obc-muted text-lg text-center max-w-[700px] leading-relaxed">
+      Whether you represent a government department or a private enterprise, we're ready to discuss your next construction project. Our team responds within one business day.
+    </p>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="bg-obc-cream flex flex-col lg:flex-row">
+
+    <!-- Left: Form Column -->
+    <div class="flex-1 p-8 lg:p-20 flex flex-col gap-8">
+
+      <!-- Form Header -->
+      <div class="flex flex-col gap-3">
+        <span class="text-obc-orange text-xs font-semibold tracking-[2px] uppercase">SEND US A MESSAGE</span>
+        <h2 class="font-heading text-obc-dark text-3xl lg:text-[38px] leading-tight">
+          Start Your Project Enquiry
+        </h2>
+        <p class="text-obc-muted text-base max-w-[480px] leading-relaxed">
+          Fill in the form below and a member of our team will be in touch within one business day.
+        </p>
+      </div>
+
+      <!-- Form -->
+      <form action="" method="POST" class="flex flex-col gap-6">
+
+        <!-- Row 1: Full Name + Company -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+          <div class="flex flex-col gap-2">
+            <label for="full-name" class="text-obc-body text-[13px] font-semibold">Full Name *</label>
+            <input
+              id="full-name"
+              name="full_name"
+              type="text"
+              required
+              placeholder="Your full name"
+              class="bg-white border border-obc-tan h-12 px-4 text-[15px] text-obc-dark placeholder-obc-muted outline-none focus:border-obc-orange transition-colors"
+            />
+          </div>
+          <div class="flex flex-col gap-2">
+            <label for="company" class="text-obc-body text-[13px] font-semibold">Company / Organisation</label>
+            <input
+              id="company"
+              name="company"
+              type="text"
+              placeholder="Company name"
+              class="bg-white border border-obc-tan h-12 px-4 text-[15px] text-obc-dark placeholder-obc-muted outline-none focus:border-obc-orange transition-colors"
+            />
+          </div>
+        </div>
+
+        <!-- Row 2: Email + Phone -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+          <div class="flex flex-col gap-2">
+            <label for="email" class="text-obc-body text-[13px] font-semibold">Email Address *</label>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              required
+              placeholder="your@email.com"
+              class="bg-white border border-obc-tan h-12 px-4 text-[15px] text-obc-dark placeholder-obc-muted outline-none focus:border-obc-orange transition-colors"
+            />
+          </div>
+          <div class="flex flex-col gap-2">
+            <label for="phone" class="text-obc-body text-[13px] font-semibold">Phone Number *</label>
+            <input
+              id="phone"
+              name="phone"
+              type="tel"
+              required
+              placeholder="+27 (0) 00 000 0000"
+              class="bg-white border border-obc-tan h-12 px-4 text-[15px] text-obc-dark placeholder-obc-muted outline-none focus:border-obc-orange transition-colors"
+            />
+          </div>
+        </div>
+
+        <!-- Service Required -->
+        <div class="flex flex-col gap-2">
+          <label for="service" class="text-obc-body text-[13px] font-semibold">Service Required</label>
+          <div class="relative">
+            <select
+              id="service"
+              name="service"
+              class="w-full bg-white border border-obc-tan h-12 px-4 text-[15px] text-obc-muted outline-none focus:border-obc-orange transition-colors appearance-none cursor-pointer"
+            >
+              <option value="" disabled selected>Select a service...</option>
+              <option value="civil-infrastructure" class="text-obc-dark">Civil Infrastructure</option>
+              <option value="residential-housing" class="text-obc-dark">Residential Housing</option>
+              <option value="commercial-construction" class="text-obc-dark">Commercial Construction</option>
+              <option value="government-projects" class="text-obc-dark">Government Projects</option>
+              <option value="renovations-refurbishments" class="text-obc-dark">Renovations &amp; Refurbishments</option>
+              <option value="other" class="text-obc-dark">Other</option>
+            </select>
+            <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4">
+              <ChevronDown class="w-[18px] h-[18px] text-obc-muted" />
+            </div>
+          </div>
+        </div>
+
+        <!-- Project Description -->
+        <div class="flex flex-col gap-2">
+          <label for="description" class="text-obc-body text-[13px] font-semibold">Project Description *</label>
+          <textarea
+            id="description"
+            name="description"
+            required
+            placeholder="Tell us about your project — scope, location, timeline, and any specific requirements..."
+            class="bg-white border border-obc-tan h-[140px] p-4 text-[15px] text-obc-dark placeholder-obc-muted outline-none focus:border-obc-orange transition-colors resize-none"
+          ></textarea>
+        </div>
+
+        <!-- Submit Button -->
+        <button
+          type="submit"
+          class="bg-obc-orange text-obc-cream flex items-center gap-3 px-10 py-4 text-sm font-bold tracking-wider w-fit hover:opacity-90 transition-opacity"
+        >
+          SEND ENQUIRY
+          <Send class="w-4 h-4" />
+        </button>
+
+      </form>
+    </div>
+
+    <!-- Right: Info Column -->
+    <div class="w-full lg:w-[480px] bg-obc-dark p-8 lg:p-[80px_60px] flex flex-col gap-10">
+
+      <!-- Header -->
+      <div class="flex flex-col gap-3">
+        <span class="text-obc-orange text-xs font-semibold tracking-[2px] uppercase">CONTACT DETAILS</span>
+        <h2 class="font-heading text-obc-cream text-3xl lg:text-4xl leading-tight">
+          Reach Us Directly
+        </h2>
+      </div>
+
+      <!-- Divider -->
+      <div class="w-[48px] h-[2px] bg-obc-orange"></div>
+
+      <!-- Contact Items -->
+      <div class="flex flex-col gap-8">
+
+        <!-- Phone -->
+        <div class="flex items-start gap-5">
+          <div class="bg-obc-orange w-11 h-11 flex items-center justify-center flex-shrink-0">
+            <Phone class="w-5 h-5 text-obc-cream" />
+          </div>
+          <div class="flex flex-col gap-1">
+            <span class="text-obc-muted text-xs font-semibold tracking-wider uppercase">PHONE</span>
+            <span class="text-obc-cream text-lg font-semibold">+27 (0) 11 000 0000</span>
+            <span class="text-obc-muted text-sm">Monday – Friday, 07:00 – 17:00</span>
+          </div>
+        </div>
+
+        <!-- Email -->
+        <div class="flex items-start gap-5">
+          <div class="bg-obc-orange w-11 h-11 flex items-center justify-center flex-shrink-0">
+            <Mail class="w-5 h-5 text-obc-cream" />
+          </div>
+          <div class="flex flex-col gap-1">
+            <span class="text-obc-muted text-xs font-semibold tracking-wider uppercase">EMAIL</span>
+            <span class="text-obc-cream text-lg font-semibold">info@omphilebotshelo.co.za</span>
+            <span class="text-obc-muted text-sm">We respond within one business day</span>
+          </div>
+        </div>
+
+        <!-- Office Address -->
+        <div class="flex items-start gap-5">
+          <div class="bg-obc-orange w-11 h-11 flex items-center justify-center flex-shrink-0">
+            <MapPin class="w-5 h-5 text-obc-cream" />
+          </div>
+          <div class="flex flex-col gap-1">
+            <span class="text-obc-muted text-xs font-semibold tracking-wider uppercase">OFFICE ADDRESS</span>
+            <span class="text-obc-cream text-lg font-semibold">123 Construction Avenue, Midrand, Gauteng, 1685</span>
+            <span class="text-obc-muted text-sm">South Africa</span>
+          </div>
+        </div>
+
+        <!-- WhatsApp -->
+        <div class="flex items-start gap-5">
+          <div class="bg-obc-whatsapp w-11 h-11 flex items-center justify-center flex-shrink-0">
+            <span class="text-obc-cream font-bold text-lg leading-none">W</span>
+          </div>
+          <div class="flex flex-col gap-1">
+            <span class="text-obc-muted text-xs font-semibold tracking-wider uppercase">WHATSAPP</span>
+            <span class="text-obc-cream text-lg font-semibold">Chat with us on WhatsApp</span>
+            <span class="text-obc-muted text-sm">Tap to start a conversation</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Info Note -->
+      <div class="bg-obc-card-dark p-5 flex items-start gap-3">
+        <Info class="w-[18px] h-[18px] text-obc-orange flex-shrink-0 mt-0.5" />
+        <p class="text-obc-muted text-[13px] leading-relaxed">
+          Government tender teams can download our full compliance pack on the Compliance page — CIDB grading, B-BBEE certificate, and tax clearance included.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- WhatsApp Banner -->
+  <section class="bg-obc-whatsapp py-12 px-6 lg:px-[120px] flex flex-col lg:flex-row items-center justify-between gap-8">
+    <div class="flex flex-col gap-2 text-center lg:text-left">
+      <span class="text-obc-whatsapp-dark text-xs font-semibold tracking-[2px] uppercase">PREFER TO CHAT?</span>
+      <h2 class="font-heading text-white text-2xl lg:text-4xl leading-tight">
+        Connect with us on WhatsApp
+      </h2>
+      <p class="text-[#E8F8ED] text-base">
+        South Africa's preferred business messaging channel — fast, direct, convenient.
+      </p>
+    </div>
+    <a
+      href="https://wa.me/27110000000"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="bg-white text-obc-whatsapp-dark flex items-center gap-2.5 px-9 py-4 text-sm font-bold tracking-wider hover:opacity-90 transition-opacity flex-shrink-0"
+    >
+      OPEN WHATSAPP
+      <MessageCircle class="w-[18px] h-[18px]" />
+    </a>
+  </section>
+
+  <!-- CTA Banner -->
+  <CTABanner
+    heading="Let's Deliver Your<br/>Next Project Together"
+    subtext="From ground-breaking to handover — construction you can count on."
+    primaryLabel="SUBMIT YOUR ENQUIRY"
+    primaryHref="/contact"
+    secondaryLabel="VIEW OUR PROJECTS"
+    secondaryHref="/projects"
+  />
+
+  <!-- Footer -->
+  <Footer active="Contact" />
+
+</Layout>

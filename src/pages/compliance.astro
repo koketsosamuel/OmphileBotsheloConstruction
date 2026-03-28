@@ -1,0 +1,195 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import { Award, ShieldCheck, FileCheck, Database, Umbrella, Building2 } from 'lucide-astro';
+---
+
+<Layout title="Compliance & Credentials" description="Compliance documentation, CIDB grading, B-BBEE status, and all procurement credentials for Omphile Botshelo Construction — available for tender submissions.">
+
+  <!-- Navbar -->
+  <Navbar active="Compliance" />
+
+  <!-- Hero -->
+  <section class="bg-obc-dark h-[280px] lg:h-[420px] flex flex-col items-center justify-center gap-5 px-6 lg:px-[120px]">
+    <span class="border border-obc-body px-4 py-1.5 text-obc-muted text-xs font-semibold tracking-[2px]">
+      PROCUREMENT DOCUMENTATION
+    </span>
+    <div class="w-[80px] h-[1px] bg-obc-body"></div>
+    <h1 class="font-heading text-obc-cream text-4xl lg:text-[56px] text-center">
+      Compliance &amp; Credentials
+    </h1>
+    <p class="text-obc-muted text-lg text-center max-w-[640px] leading-relaxed">
+      All documentation available for procurement verification and tender submissions
+    </p>
+  </section>
+
+  <!-- Compliance Documents -->
+  <section class="bg-obc-cream py-20 px-6 lg:px-[120px] flex flex-col gap-12">
+    <!-- Header -->
+    <div class="flex flex-col gap-4">
+      <h2 class="font-heading text-obc-dark text-3xl lg:text-[40px]">Compliance Documentation</h2>
+      <p class="text-obc-body text-base leading-relaxed max-w-[680px]">
+        All certificates and registrations are current, independently verified, and available for immediate download for tender submissions.
+      </p>
+    </div>
+
+    <!-- Grid -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-5">
+
+      <!-- Card 1: CIDB -->
+      <div class="bg-white p-7 flex flex-col gap-4">
+        <Award class="text-obc-orange w-8 h-8" />
+        <h3 class="font-heading text-obc-dark text-xl">CIDB Grading Certificate</h3>
+        <p class="text-obc-body text-sm leading-relaxed">
+          Construction Industry Development Board grading confirming our registered class and grade of work for public and private sector contracts.
+        </p>
+        <span class="bg-[#EBF2EE] text-obc-orange text-xs font-semibold tracking-wider px-3 py-1.5 w-fit">
+          CURRENT &amp; VALID
+        </span>
+      </div>
+
+      <!-- Card 2: B-BBEE -->
+      <div class="bg-white p-7 flex flex-col gap-4">
+        <ShieldCheck class="text-obc-orange w-8 h-8" />
+        <h3 class="font-heading text-obc-dark text-xl">B-BBEE Certificate</h3>
+        <p class="text-obc-body text-sm leading-relaxed">
+          Broad-Based Black Economic Empowerment verification certificate confirming our B-BBEE level status and procurement recognition score.
+        </p>
+        <span class="bg-[#EBF2EE] text-obc-orange text-xs font-semibold tracking-wider px-3 py-1.5 w-fit">
+          CURRENT &amp; VALID
+        </span>
+      </div>
+
+      <!-- Card 3: Tax Clearance -->
+      <div class="bg-white p-7 flex flex-col gap-4">
+        <FileCheck class="text-obc-orange w-8 h-8" />
+        <h3 class="font-heading text-obc-dark text-xl">Tax Clearance Certificate</h3>
+        <p class="text-obc-body text-sm leading-relaxed">
+          SARS Tax Clearance Certificate confirming Good Standing — mandatory for all government tender submissions above the prescribed threshold.
+        </p>
+        <span class="bg-[#EBF2EE] text-obc-orange text-xs font-semibold tracking-wider px-3 py-1.5 w-fit">
+          CURRENT &amp; VALID
+        </span>
+      </div>
+
+      <!-- Card 4: CSD -->
+      <div class="bg-white p-7 flex flex-col gap-4">
+        <Database class="text-obc-orange w-8 h-8" />
+        <h3 class="font-heading text-obc-dark text-xl">CSD Registration</h3>
+        <p class="text-obc-body text-sm leading-relaxed">
+          Central Supplier Database registration confirming our active supplier status and unique supplier number for all government procurement portals.
+        </p>
+        <span class="bg-[#EBF2EE] text-obc-orange text-xs font-semibold tracking-wider px-3 py-1.5 w-fit">
+          CURRENT &amp; VALID
+        </span>
+      </div>
+
+      <!-- Card 5: COIDA -->
+      <div class="bg-white p-7 flex flex-col gap-4">
+        <Umbrella class="text-obc-orange w-8 h-8" />
+        <h3 class="font-heading text-obc-dark text-xl">COIDA Letter of Good Standing</h3>
+        <p class="text-obc-body text-sm leading-relaxed">
+          Compensation for Occupational Injuries and Diseases Act letter confirming all workmen's compensation obligations are up to date and in good standing.
+        </p>
+        <span class="bg-[#EBF2EE] text-obc-orange text-xs font-semibold tracking-wider px-3 py-1.5 w-fit">
+          CURRENT &amp; VALID
+        </span>
+      </div>
+
+      <!-- Card 6: CIPC -->
+      <div class="bg-white p-7 flex flex-col gap-4">
+        <Building2 class="text-obc-orange w-8 h-8" />
+        <h3 class="font-heading text-obc-dark text-xl">CIPC Company Registration</h3>
+        <p class="text-obc-body text-sm leading-relaxed">
+          Companies and Intellectual Property Commission registration documents confirming our legal entity status, registration number, and directors information.
+        </p>
+        <span class="bg-[#EBF2EE] text-obc-orange text-xs font-semibold tracking-wider px-3 py-1.5 w-fit">
+          CURRENT &amp; VALID
+        </span>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CIDB Grading -->
+  <section class="bg-obc-tan py-20 px-6 lg:px-[120px] flex flex-col items-center gap-6">
+    <span class="text-obc-body text-xs font-semibold tracking-[2px] text-center">CIDB GRADING DESIGNATION</span>
+    <h2 class="font-heading text-obc-dark text-8xl lg:text-[96px] text-center">4 CE</h2>
+    <p class="text-obc-body text-2xl text-center">Grade 4 · Civil Engineering</p>
+    <div class="w-[80px] h-[2px] bg-obc-dark"></div>
+    <div class="flex flex-col lg:flex-row gap-8 pt-8 w-full">
+      <!-- Column 1 -->
+      <div class="flex-1 flex flex-col gap-2.5">
+        <span class="text-obc-body text-xs font-semibold tracking-wider">CONTRACT VALUE</span>
+        <p class="text-obc-dark text-[15px] leading-relaxed">Eligible for contracts up to R30 million in civil engineering work</p>
+      </div>
+      <!-- Column 2 -->
+      <div class="flex-1 flex flex-col gap-2.5">
+        <span class="text-obc-body text-xs font-semibold tracking-wider">TENDER ELIGIBILITY</span>
+        <p class="text-obc-dark text-[15px] leading-relaxed">Qualifies for all major government and municipal infrastructure tenders</p>
+      </div>
+      <!-- Column 3 -->
+      <div class="flex-1 flex flex-col gap-2.5">
+        <span class="text-obc-body text-xs font-semibold tracking-wider">TRACK RECORD</span>
+        <p class="text-obc-dark text-[15px] leading-relaxed">Proven delivery on public sector civil engineering and infrastructure projects</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- B-BBEE Status -->
+  <section class="bg-obc-dark py-20 px-6 lg:px-[120px] flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
+    <!-- Left -->
+    <div class="flex flex-col gap-2">
+      <span class="text-obc-muted text-xs font-semibold tracking-[2px]">B-BBEE STATUS</span>
+      <span class="font-heading text-obc-orange text-6xl lg:text-[80px]">Level 1</span>
+      <span class="font-heading text-obc-cream text-2xl lg:text-[28px]">Contributor</span>
+    </div>
+    <!-- Right -->
+    <div class="flex-1 flex flex-col gap-5">
+      <h2 class="font-heading text-obc-cream text-3xl lg:text-4xl leading-tight">Maximum Procurement Recognition</h2>
+      <p class="text-obc-muted text-base leading-relaxed">
+        As a Level 1 B-BBEE contributor, Omphile Botshelo Construction delivers the highest possible preferential procurement recognition — 135% of the value spent is recognised toward your organisation's B-BBEE procurement scorecard.
+      </p>
+    </div>
+  </section>
+
+  <!-- Request Documents -->
+  <section class="bg-obc-cream py-20 px-6 lg:px-[120px] flex flex-col items-center gap-10 text-center">
+    <h2 class="font-heading text-obc-dark text-3xl lg:text-[40px]">Request a Full Compliance Pack</h2>
+    <p class="text-obc-body text-base leading-relaxed max-w-[600px]">
+      Procurement officers may request a complete documentation pack including certified copies of all compliance certificates for tender submission verification. We respond within 24 hours.
+    </p>
+    <!-- Input row -->
+    <div class="flex flex-col sm:flex-row items-center gap-0">
+      <input
+        type="email"
+        placeholder="your.email@organisation.gov.za"
+        class="bg-white border border-obc-tan h-[52px] px-5 text-[15px] w-full sm:w-[340px] placeholder:text-obc-muted outline-none"
+      />
+      <button class="bg-obc-orange h-[52px] px-8 text-obc-cream text-[13px] font-semibold tracking-wider w-full sm:w-auto">
+        REQUEST PACK
+      </button>
+    </div>
+    <p class="text-obc-muted text-sm">
+      Or contact us directly at compliance@omphileconstruction.co.za
+    </p>
+  </section>
+
+  <!-- CTA Banner -->
+  <section class="bg-obc-orange py-14 px-6 lg:px-[120px] flex flex-col lg:flex-row items-center justify-between gap-6">
+    <!-- Left -->
+    <div class="flex flex-col gap-2.5">
+      <h2 class="font-heading text-obc-cream text-xl lg:text-[30px]">Need our full company profile for your tender?</h2>
+      <p class="text-obc-tan text-[15px]">Request the complete profile with project portfolio, team credentials, and methodology statements.</p>
+    </div>
+    <!-- Button -->
+    <a href="/contact" class="bg-obc-cream text-obc-orange flex items-center gap-2 px-8 py-4 text-xs font-semibold tracking-wider flex-shrink-0">
+      REQUEST COMPANY PROFILE
+    </a>
+  </section>
+
+  <!-- Footer -->
+  <Footer active="Compliance" />
+
+</Layout>

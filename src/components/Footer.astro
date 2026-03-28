@@ -1,0 +1,64 @@
+---
+interface Props {
+  active?: string;
+}
+
+const { active = 'Home' } = Astro.props;
+
+const quickLinks = [
+  { name: 'Home', href: '/' },
+  { name: 'About Us', href: '/about' },
+  { name: 'Services', href: '/services' },
+  { name: 'Projects', href: '/projects' },
+  { name: 'Compliance', href: '/compliance' },
+  { name: 'Contact', href: '/contact' },
+];
+---
+
+<footer class="bg-obc-dark">
+  <div class="px-10 lg:px-20 pt-12 lg:pt-16 pb-10">
+    <div class="flex flex-col lg:flex-row gap-10 lg:gap-16">
+      <!-- Brand -->
+      <div class="lg:w-80 flex flex-col gap-4">
+        <img src="/logo.png" alt="OBC Logo" class="h-14 w-40 object-contain" />
+        <p class="text-obc-muted text-sm leading-relaxed max-w-[280px]">
+          Building South Africa's future — one community at a time. Proud CIDB Grade 4CE contractor with a Level 1 B-BBEE rating.
+        </p>
+        <div class="w-10 h-0.5 bg-obc-orange"></div>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="flex flex-col gap-3">
+        <h4 class="text-obc-tan text-[11px] font-semibold tracking-widest uppercase">Quick Links</h4>
+        {quickLinks.map((link) => (
+          <a
+            href={link.href}
+            class:list={[
+              'text-sm transition-colors',
+              active === link.name ? 'text-obc-cream' : 'text-obc-muted hover:text-obc-cream',
+            ]}
+          >
+            {link.name}
+          </a>
+        ))}
+      </div>
+
+      <!-- Contact -->
+      <div class="flex flex-col gap-3">
+        <h4 class="text-obc-tan text-[11px] font-semibold tracking-widest uppercase">Contact</h4>
+        <p class="text-obc-muted text-sm">+27 (0) 11 000 0000</p>
+        <p class="text-obc-muted text-sm">info@omphilebotshelo.co.za</p>
+        <p class="text-obc-muted text-sm">Gauteng, South Africa</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Divider -->
+  <div class="mx-10 lg:mx-20 h-px bg-obc-divider"></div>
+
+  <!-- Bottom -->
+  <div class="px-10 lg:px-20 py-5 flex flex-col lg:flex-row justify-between items-center gap-2">
+    <p class="text-obc-body text-xs">&copy; 2024 Omphile Botshelo Construction (Pty) Ltd. All rights reserved.</p>
+    <p class="text-obc-body text-xs">CIDB Registered &middot; B-BBEE Level 1 &middot; CSD Registered</p>
+  </div>
+</footer>

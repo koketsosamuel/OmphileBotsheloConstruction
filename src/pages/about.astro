@@ -1,0 +1,202 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import CTABanner from '../components/CTABanner.astro';
+import { ShieldCheck, Award, Users } from 'lucide-astro';
+---
+
+<Layout title="About Us" description="Learn about Omphile Botshelo Construction — a proudly South African construction company established in 2008, committed to quality, community, and transformation.">
+
+  <!-- Navbar -->
+  <Navbar active="About" />
+
+  <!-- Hero -->
+  <section class="bg-obc-dark h-[300px] lg:h-[520px] flex flex-col items-center justify-center gap-5 px-6 lg:px-[120px] text-center">
+    <span class="bg-obc-orange px-4 py-1.5 text-obc-tan text-xs font-semibold tracking-[2px] uppercase">
+      ESTABLISHED 2008
+    </span>
+    <h1 class="font-heading text-obc-cream text-5xl lg:text-[80px] leading-tight">
+      Who We Are
+    </h1>
+    <div class="w-[60px] h-[3px] bg-obc-orange"></div>
+    <p class="text-obc-muted text-lg text-center max-w-[680px] leading-relaxed">
+      A proudly South African construction company committed to building communities, delivering quality, and empowering local economies across the nation.
+    </p>
+  </section>
+
+  <!-- Company Story -->
+  <section class="flex flex-col lg:flex-row">
+    <!-- Image -->
+    <div class="w-full lg:w-[620px] h-[400px] lg:h-auto overflow-hidden flex-shrink-0">
+      <img
+        src="https://images.unsplash.com/photo-1572217278174-ea3eb3f3bc8b?w=800&q=80"
+        alt="Construction site — Omphile Botshelo Construction"
+        class="w-full h-full object-cover"
+      />
+    </div>
+    <!-- Content -->
+    <div class="bg-obc-cream p-10 lg:p-16 flex flex-col gap-5 justify-center">
+      <span class="text-obc-orange text-xs font-semibold tracking-[2px] uppercase">OUR STORY</span>
+      <h2 class="font-heading text-obc-dark text-3xl lg:text-[40px] leading-tight">
+        Built on Trust, Grown Through Service
+      </h2>
+      <div class="w-[48px] h-[3px] bg-obc-orange"></div>
+      <p class="text-obc-body text-[15px] leading-[1.8]">
+        Omphile Botshelo Construction was established in 2008 with a clear vision: to be a construction company that not only builds structures but builds futures. Founded in Gauteng, we have grown from a small local contractor into a nationally recognised construction firm.
+      </p>
+      <p class="text-obc-body text-[15px] leading-[1.8]">
+        We have successfully delivered government housing projects, municipal infrastructure, commercial developments, and community facilities across South Africa. Our work spans Gauteng, Limpopo, North West, and beyond.
+      </p>
+      <p class="text-obc-body text-[15px] leading-[1.8]">
+        As a proudly Black-owned and community-driven business, we remain committed to uplifting the communities in which we operate — through employment, training, and sustainable development practices.
+      </p>
+      <p class="text-obc-body text-[15px] leading-[1.8]">
+        Today, Omphile Botshelo Construction stands as a trusted partner to government departments, municipalities, and private sector clients who demand quality, reliability, and accountability.
+      </p>
+    </div>
+  </section>
+
+  <!-- Mission & Values -->
+  <section class="bg-obc-tan py-20 px-6 lg:px-[120px] flex flex-col items-center gap-14">
+    <!-- Header -->
+    <div class="flex flex-col items-center gap-3 text-center">
+      <span class="text-obc-orange text-xs font-semibold tracking-[2px] uppercase">OUR VALUES</span>
+      <h2 class="font-heading text-obc-dark text-4xl">What We Stand For</h2>
+      <p class="text-obc-body text-base max-w-[520px]">
+        Our work is guided by principles that have shaped who we are and how we deliver.
+      </p>
+    </div>
+
+    <!-- Cards -->
+    <div class="grid lg:grid-cols-3 gap-6 w-full">
+      <!-- Integrity -->
+      <div class="bg-obc-cream p-10 flex flex-col gap-5">
+        <ShieldCheck class="text-obc-orange w-9 h-9" />
+        <h3 class="font-heading text-obc-dark text-2xl">Integrity</h3>
+        <div class="w-[36px] h-[2px] bg-obc-orange"></div>
+        <p class="text-obc-body text-[15px] leading-relaxed">
+          We operate with complete transparency and honesty in every project, every contract, and every relationship. Our clients trust us because we do what we say — without exception.
+        </p>
+      </div>
+
+      <!-- Excellence -->
+      <div class="bg-obc-dark p-10 flex flex-col gap-5">
+        <Award class="text-obc-orange w-9 h-9" />
+        <h3 class="font-heading text-obc-cream text-2xl">Excellence</h3>
+        <div class="w-[36px] h-[2px] bg-obc-orange"></div>
+        <p class="text-obc-muted text-[15px] leading-relaxed">
+          From foundation to finish, we uphold the highest construction standards. Excellence is not a goal — it is our baseline. Every structure we deliver is a testament to craftsmanship and precision.
+        </p>
+      </div>
+
+      <!-- Community -->
+      <div class="bg-obc-cream p-10 flex flex-col gap-5">
+        <Users class="text-obc-orange w-9 h-9" />
+        <h3 class="font-heading text-obc-dark text-2xl">Community</h3>
+        <div class="w-[36px] h-[2px] bg-obc-orange"></div>
+        <p class="text-obc-body text-[15px] leading-relaxed">
+          We invest in the people and places we build for. Through local employment, skills development, and active community engagement, we ensure our projects leave a lasting positive impact.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CIDB Credentials -->
+  <section class="bg-obc-dark py-20 px-6 lg:px-[120px] flex flex-col items-center gap-16">
+    <!-- Header -->
+    <div class="flex flex-col items-center gap-3 text-center">
+      <span class="text-obc-orange text-xs font-semibold tracking-[2px] uppercase">CREDENTIALS &amp; COMPLIANCE</span>
+      <h2 class="font-heading text-obc-cream text-4xl">Certified. Graded. Trusted.</h2>
+      <p class="text-obc-muted text-base max-w-[560px]">
+        Our credentials reflect our commitment to industry standards, transformation, and professional excellence.
+      </p>
+    </div>
+
+    <!-- Stats -->
+    <div class="flex flex-col lg:flex-row w-full divide-y lg:divide-y-0 lg:divide-x divide-obc-divider">
+      <!-- CIDB Grading -->
+      <div class="flex flex-col items-center gap-3 text-center flex-1 py-6 lg:py-0">
+        <span class="font-heading text-obc-orange text-6xl">4CE</span>
+        <span class="text-obc-muted text-xs tracking-[2px] font-semibold uppercase">CIDB GRADING</span>
+        <p class="text-obc-body text-sm max-w-[220px]">Civil Engineering — highest grade for large infrastructure contracts</p>
+      </div>
+
+      <!-- B-BBEE -->
+      <div class="flex flex-col items-center gap-3 text-center flex-1 py-6 lg:py-0">
+        <span class="font-heading text-obc-orange text-6xl">Level 1</span>
+        <span class="text-obc-muted text-xs tracking-[2px] font-semibold uppercase">B-BBEE STATUS</span>
+        <p class="text-obc-body text-sm max-w-[220px]">Highest empowerment rating, supporting transformation and inclusion</p>
+      </div>
+
+      <!-- Years Experience -->
+      <div class="flex flex-col items-center gap-3 text-center flex-1 py-6 lg:py-0">
+        <span class="font-heading text-obc-orange text-6xl">16+</span>
+        <span class="text-obc-muted text-xs tracking-[2px] font-semibold uppercase">YEARS EXPERIENCE</span>
+        <p class="text-obc-body text-sm max-w-[220px]">Over 16 years of delivering successful construction projects nationwide</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Leadership Team -->
+  <section class="bg-obc-cream py-20 px-6 lg:px-[120px] flex flex-col items-center gap-14">
+    <!-- Header -->
+    <div class="flex flex-col items-center gap-3 text-center">
+      <span class="text-obc-orange text-xs font-semibold tracking-[2px] uppercase">OUR LEADERSHIP</span>
+      <h2 class="font-heading text-obc-dark text-4xl">The People Behind the Work</h2>
+      <p class="text-obc-body text-base max-w-[500px]">
+        A dedicated team of construction professionals committed to excellence on every project.
+      </p>
+    </div>
+
+    <!-- Cards -->
+    <div class="grid lg:grid-cols-3 gap-6 w-full">
+      <!-- Omphile Botshelo -->
+      <div class="bg-obc-cream p-10 flex flex-col items-center gap-4 text-center">
+        <div class="w-[100px] h-[100px] rounded-full bg-obc-tan"></div>
+        <h3 class="font-heading text-obc-dark text-xl">Omphile Botshelo</h3>
+        <span class="text-obc-orange text-xs font-semibold tracking-[2px] uppercase">FOUNDER &amp; CEO</span>
+        <div class="w-[32px] h-[2px] bg-obc-tan"></div>
+        <p class="text-obc-body text-sm leading-relaxed">
+          With over 16 years in the construction industry, Omphile founded the company on the principles of quality and community. He leads the strategic direction and client relationships across all major projects.
+        </p>
+      </div>
+
+      <!-- Dineo Mokoena -->
+      <div class="bg-obc-dark p-10 flex flex-col items-center gap-4 text-center">
+        <div class="w-[100px] h-[100px] rounded-full bg-obc-body"></div>
+        <h3 class="font-heading text-obc-cream text-xl">Dineo Mokoena</h3>
+        <span class="text-obc-orange text-xs font-semibold tracking-[2px] uppercase">OPERATIONS DIRECTOR</span>
+        <div class="w-[32px] h-[2px] bg-obc-orange"></div>
+        <p class="text-obc-muted text-sm leading-relaxed">
+          Dineo oversees all site operations, procurement, and contractor management. Her hands-on approach and deep understanding of construction logistics ensures projects are delivered efficiently, safely, and on programme.
+        </p>
+      </div>
+
+      <!-- Sipho Dlamini -->
+      <div class="bg-obc-cream p-10 flex flex-col items-center gap-4 text-center">
+        <div class="w-[100px] h-[100px] rounded-full bg-obc-tan"></div>
+        <h3 class="font-heading text-obc-dark text-xl">Sipho Dlamini</h3>
+        <span class="text-obc-orange text-xs font-semibold tracking-[2px] uppercase">CHIEF ENGINEER</span>
+        <div class="w-[32px] h-[2px] bg-obc-tan"></div>
+        <p class="text-obc-body text-sm leading-relaxed">
+          Sipho brings deep civil and structural engineering expertise to every project. A registered professional engineer with the ECSA, he ensures that every structure meets the highest standards of safety and design.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Banner -->
+  <CTABanner
+    heading="Ready to Work With Us?"
+    subtext="Let's build together. From government contracts to private developments — we deliver with pride."
+    primaryLabel="Contact Us Today"
+    primaryHref="/contact"
+    secondaryLabel="View Our Projects"
+    secondaryHref="/projects"
+  />
+
+  <!-- Footer -->
+  <Footer active="About Us" />
+
+</Layout>

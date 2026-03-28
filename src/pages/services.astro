@@ -1,0 +1,210 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import CTABanner from '../components/CTABanner.astro';
+---
+
+<Layout
+  title="Services"
+  description="Full-spectrum construction services across South Africa — civil works, building construction, infrastructure, renovations, and project management."
+>
+  <Navbar active="Services" />
+
+  <!-- Hero -->
+  <section class="bg-obc-dark h-[300px] lg:h-[480px] px-6 lg:px-[120px] flex flex-col justify-center gap-5">
+    <span class="bg-obc-orange px-4 py-2 text-obc-cream text-xs font-semibold tracking-wider w-fit">
+      CONSTRUCTION EXCELLENCE
+    </span>
+    <h1 class="text-obc-cream font-heading text-4xl lg:text-7xl">Our Services</h1>
+    <p class="text-obc-muted text-lg max-w-[640px] leading-relaxed">
+      From groundbreaking civil works to precision project management — we deliver full-spectrum construction capability across South Africa.
+    </p>
+    <div class="w-16 h-[3px] bg-obc-tan"></div>
+  </section>
+
+  <!-- Service 1 — Civil Works (image LEFT) -->
+  <section class="bg-obc-cream flex flex-col lg:flex-row h-auto lg:h-[560px] w-full">
+    <img
+      src="https://images.unsplash.com/photo-1770869717609-61e4a9c535ab?w=800&q=80"
+      alt="Civil Works"
+      class="w-full lg:w-[640px] h-[300px] lg:h-full object-cover"
+    />
+    <div class="flex-1 p-8 lg:p-[64px_72px] flex flex-col gap-6 justify-center">
+      <span class="bg-obc-dark text-obc-tan px-3 py-1.5 text-xs font-semibold tracking-wider w-fit">
+        01 — CIVIL WORKS
+      </span>
+      <h2 class="text-obc-dark font-heading text-4xl">Civil Works</h2>
+      <p class="text-obc-body text-[15px] leading-relaxed max-w-[480px]">
+        Our civil works division delivers robust infrastructure that forms the foundation of every successful development.
+        We execute complex earthworks, road construction, and drainage systems with precision and efficiency.
+      </p>
+      <p class="text-obc-muted text-xs font-semibold tracking-wider">TYPICAL PROJECTS INCLUDE</p>
+      <ul class="flex flex-col gap-2.5">
+        <li class="text-obc-dark text-sm">— Road construction and surfacing</li>
+        <li class="text-obc-dark text-sm">— Stormwater and drainage systems</li>
+        <li class="text-obc-dark text-sm">— Earthworks and bulk excavation</li>
+        <li class="text-obc-dark text-sm">— Site preparation and clearing</li>
+      </ul>
+      <a
+        href="/contact"
+        class="bg-obc-dark text-obc-cream px-8 py-3.5 text-xs font-semibold tracking-wider w-fit hover:bg-obc-orange transition-colors"
+      >
+        DISCUSS YOUR PROJECT
+      </a>
+    </div>
+  </section>
+
+  <!-- Divider -->
+  <div class="h-px bg-obc-tan w-full"></div>
+
+  <!-- Service 2 — Building Construction (image RIGHT) -->
+  <section class="bg-[#E8E4DC] flex flex-col lg:flex-row-reverse h-auto lg:h-[560px] w-full">
+    <img
+      src="https://images.unsplash.com/photo-1768988799497-124836aaa10b?w=800&q=80"
+      alt="Building Construction"
+      class="w-full lg:w-[640px] h-[300px] lg:h-full object-cover"
+    />
+    <div class="flex-1 p-8 lg:p-[64px_72px] flex flex-col gap-6 justify-center">
+      <span class="bg-obc-dark text-obc-tan px-3 py-1.5 text-xs font-semibold tracking-wider w-fit">
+        02 — BUILDING CONSTRUCTION
+      </span>
+      <h2 class="text-obc-dark font-heading text-4xl">Building Construction</h2>
+      <p class="text-obc-body text-[15px] leading-relaxed max-w-[480px]">
+        We construct durable, compliant buildings for commercial, institutional, and government clients. Our teams manage
+        the full build lifecycle — from structural foundations to finishes — ensuring quality at every stage.
+      </p>
+      <p class="text-obc-muted text-xs font-semibold tracking-wider">TYPICAL PROJECTS INCLUDE</p>
+      <ul class="flex flex-col gap-2.5">
+        <li class="text-obc-dark text-sm">— Commercial office buildings</li>
+        <li class="text-obc-dark text-sm">— Government facilities and offices</li>
+        <li class="text-obc-dark text-sm">— Schools and educational institutions</li>
+        <li class="text-obc-dark text-sm">— Clinics and healthcare facilities</li>
+      </ul>
+      <a
+        href="/contact"
+        class="bg-obc-dark text-obc-cream px-8 py-3.5 text-xs font-semibold tracking-wider w-fit hover:bg-obc-orange transition-colors"
+      >
+        DISCUSS YOUR PROJECT
+      </a>
+    </div>
+  </section>
+
+  <!-- Divider -->
+  <div class="h-px bg-obc-tan w-full"></div>
+
+  <!-- Service 3 — Infrastructure (image LEFT) -->
+  <section class="bg-obc-cream flex flex-col lg:flex-row h-auto lg:h-[560px] w-full">
+    <img
+      src="https://images.unsplash.com/photo-1566890539119-3329d1701535?w=800&q=80"
+      alt="Infrastructure"
+      class="w-full lg:w-[640px] h-[300px] lg:h-full object-cover"
+    />
+    <div class="flex-1 p-8 lg:p-[64px_72px] flex flex-col gap-6 justify-center">
+      <span class="bg-obc-dark text-obc-tan px-3 py-1.5 text-xs font-semibold tracking-wider w-fit">
+        03 — INFRASTRUCTURE
+      </span>
+      <h2 class="text-obc-dark font-heading text-4xl">Infrastructure</h2>
+      <p class="text-obc-body text-[15px] leading-relaxed max-w-[480px]">
+        We design and install critical service infrastructure that sustains communities. Our teams are experienced in
+        water, sewer, and electrical reticulation for both greenfield developments and upgrade projects.
+      </p>
+      <p class="text-obc-muted text-xs font-semibold tracking-wider">TYPICAL PROJECTS INCLUDE</p>
+      <ul class="flex flex-col gap-2.5">
+        <li class="text-obc-dark text-sm">— Water reticulation networks</li>
+        <li class="text-obc-dark text-sm">— Sewer and sanitation systems</li>
+        <li class="text-obc-dark text-sm">— Electrical reticulation</li>
+        <li class="text-obc-dark text-sm">— Municipal bulk services</li>
+      </ul>
+      <a
+        href="/contact"
+        class="bg-obc-dark text-obc-cream px-8 py-3.5 text-xs font-semibold tracking-wider w-fit hover:bg-obc-orange transition-colors"
+      >
+        DISCUSS YOUR PROJECT
+      </a>
+    </div>
+  </section>
+
+  <!-- Divider -->
+  <div class="h-px bg-obc-tan w-full"></div>
+
+  <!-- Service 4 — Renovations (image RIGHT) -->
+  <section class="bg-[#E8E4DC] flex flex-col lg:flex-row-reverse h-auto lg:h-[560px] w-full">
+    <img
+      src="https://images.unsplash.com/photo-1620984554709-6de3edbebd75?w=800&q=80"
+      alt="Renovations and Maintenance"
+      class="w-full lg:w-[640px] h-[300px] lg:h-full object-cover"
+    />
+    <div class="flex-1 p-8 lg:p-[64px_72px] flex flex-col gap-6 justify-center">
+      <span class="bg-obc-dark text-obc-tan px-3 py-1.5 text-xs font-semibold tracking-wider w-fit">
+        04 — RENOVATIONS &amp; MAINTENANCE
+      </span>
+      <h2 class="text-obc-dark font-heading text-4xl">Renovations &amp; Maintenance</h2>
+      <p class="text-obc-body text-[15px] leading-relaxed max-w-[480px]">
+        We breathe new life into existing structures through comprehensive refurbishment, planned upgrades, and ongoing
+        maintenance contracts. Our teams minimise disruption while maximising building performance and longevity.
+      </p>
+      <p class="text-obc-muted text-xs font-semibold tracking-wider">TYPICAL PROJECTS INCLUDE</p>
+      <ul class="flex flex-col gap-2.5">
+        <li class="text-obc-dark text-sm">— Building refurbishment and upgrades</li>
+        <li class="text-obc-dark text-sm">— Planned and reactive maintenance</li>
+        <li class="text-obc-dark text-sm">— Structural repairs and waterproofing</li>
+        <li class="text-obc-dark text-sm">— Long-term maintenance contracts</li>
+      </ul>
+      <a
+        href="/contact"
+        class="bg-obc-dark text-obc-cream px-8 py-3.5 text-xs font-semibold tracking-wider w-fit hover:bg-obc-orange transition-colors"
+      >
+        DISCUSS YOUR PROJECT
+      </a>
+    </div>
+  </section>
+
+  <!-- Divider -->
+  <div class="h-px bg-obc-tan w-full"></div>
+
+  <!-- Service 5 — Project Management (image LEFT, DARK THEME) -->
+  <section class="bg-obc-dark flex flex-col lg:flex-row h-auto lg:h-[560px] w-full">
+    <img
+      src="https://images.unsplash.com/photo-1581092459682-ccfffd6ddc37?w=800&q=80"
+      alt="Project Management"
+      class="w-full lg:w-[640px] h-[300px] lg:h-full object-cover"
+    />
+    <div class="flex-1 p-8 lg:p-[64px_72px] flex flex-col gap-6 justify-center">
+      <span class="bg-obc-orange text-obc-cream px-3 py-1.5 text-xs font-semibold tracking-wider w-fit">
+        05 — PROJECT MANAGEMENT
+      </span>
+      <h2 class="text-obc-cream font-heading text-4xl">Project Management</h2>
+      <p class="text-obc-muted text-[15px] leading-relaxed max-w-[480px]">
+        We provide end-to-end project oversight that keeps complex builds on time and within budget. From initial
+        programming through to handover, our managers ensure seamless coordination of all stakeholders and
+        subcontractors.
+      </p>
+      <p class="text-obc-body text-xs font-semibold tracking-wider">TYPICAL PROJECTS INCLUDE</p>
+      <ul class="flex flex-col gap-2.5">
+        <li class="text-obc-tan text-sm">— End-to-end project oversight</li>
+        <li class="text-obc-tan text-sm">— Subcontractor coordination</li>
+        <li class="text-obc-tan text-sm">— Programme and budget management</li>
+        <li class="text-obc-tan text-sm">— Stakeholder reporting and compliance</li>
+      </ul>
+      <a
+        href="/contact"
+        class="bg-obc-orange text-obc-cream px-8 py-3.5 text-xs font-semibold tracking-wider w-fit hover:bg-orange-700 transition-colors"
+      >
+        DISCUSS YOUR PROJECT
+      </a>
+    </div>
+  </section>
+
+  <!-- CTA Banner -->
+  <CTABanner
+    heading="Have a project in mind?"
+    subtext="Contact our team today and let's bring your vision to life."
+    primaryLabel="CONTACT OUR TEAM"
+    primaryHref="/contact"
+    secondaryLabel="VIEW PROJECTS"
+    secondaryHref="/projects"
+  />
+
+  <Footer active="Services" />
+</Layout>

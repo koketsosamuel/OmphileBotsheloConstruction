@@ -1,0 +1,628 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import CTABanner from '../components/CTABanner.astro';
+import {
+  HardHat,
+  Building2,
+  Landmark,
+  Wrench,
+  CircleCheck,
+  BadgeCheck,
+  Users,
+  FileCheck,
+  Database,
+  Shield,
+  Award,
+  ShieldCheck,
+  Layers,
+} from 'lucide-astro';
+---
+
+<Layout title="Home">
+  <Navbar active="Home" />
+
+  <!-- ===== HERO SECTION ===== -->
+  <section
+    class="relative flex items-center justify-center text-center px-6 min-h-[480px] lg:min-h-[700px]"
+    style="background-image: url('https://images.unsplash.com/photo-1638684845952-71a63f1df5e8?w=1440&q=80'); background-size: cover; background-position: center;"
+  >
+    <!-- Dark overlay -->
+    <div class="absolute inset-0 bg-black/60"></div>
+
+    <!-- Content -->
+    <div class="relative z-10 flex flex-col items-center gap-6 max-w-4xl mx-auto">
+      <h1 class="font-heading text-obc-cream text-4xl lg:text-6xl leading-tight">
+        Building South Africa's Future, One Project at a Time
+      </h1>
+      <p class="text-obc-tan text-base lg:text-lg max-w-2xl leading-relaxed">
+        From civil infrastructure to government contracts — delivering quality, compliance, and commitment across South Africa.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 mt-2">
+        <a
+          href="/projects"
+          class="bg-obc-orange text-obc-cream text-xs font-bold tracking-widest px-8 py-4 uppercase hover:bg-orange-700 transition-colors"
+        >
+          VIEW OUR PROJECTS
+        </a>
+        <a
+          href="/contact"
+          class="border-2 border-obc-cream text-obc-cream text-xs font-bold tracking-widest px-8 py-4 uppercase hover:bg-obc-cream hover:text-obc-dark transition-colors"
+        >
+          REQUEST A QUOTE
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CREDIBILITY BAR ===== -->
+  <section class="bg-obc-dark py-10 px-6 lg:px-20">
+    <div class="flex flex-wrap justify-between items-center gap-8 lg:gap-0 max-w-5xl mx-auto lg:max-w-none">
+      <!-- Stat: Years -->
+      <div class="flex flex-col items-center gap-1 flex-1 min-w-[120px]">
+        <span class="font-heading text-5xl text-obc-tan">15+</span>
+        <span class="text-xs font-semibold tracking-widest text-obc-muted uppercase">YEARS IN OPERATION</span>
+      </div>
+      <!-- Divider -->
+      <div class="hidden lg:block w-px h-12 bg-obc-divider"></div>
+      <!-- Stat: Projects -->
+      <div class="flex flex-col items-center gap-1 flex-1 min-w-[120px]">
+        <span class="font-heading text-5xl text-obc-tan">120+</span>
+        <span class="text-xs font-semibold tracking-widest text-obc-muted uppercase">PROJECTS COMPLETED</span>
+      </div>
+      <!-- Divider -->
+      <div class="hidden lg:block w-px h-12 bg-obc-divider"></div>
+      <!-- Stat: Government Contracts -->
+      <div class="flex flex-col items-center gap-1 flex-1 min-w-[120px]">
+        <span class="font-heading text-5xl text-obc-tan">60+</span>
+        <span class="text-xs font-semibold tracking-widest text-obc-muted uppercase">GOVERNMENT CONTRACTS</span>
+      </div>
+      <!-- Divider -->
+      <div class="hidden lg:block w-px h-12 bg-obc-divider"></div>
+      <!-- Stat: CIDB -->
+      <div class="flex flex-col items-center gap-1 flex-1 min-w-[120px]">
+        <span class="font-heading text-5xl text-obc-orange">CIDB 4</span>
+        <span class="text-xs font-semibold tracking-widest text-obc-muted uppercase">GRADE CERTIFIED</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT TEASER ===== -->
+  <section class="flex flex-col lg:flex-row min-h-[560px]">
+    <!-- Image Column -->
+    <div class="lg:w-1/2 min-h-[300px] lg:min-h-0">
+      <img
+        src="https://images.unsplash.com/photo-1660652839984-c98e90804d3d?w=800&q=80"
+        alt="Construction team at work"
+        class="w-full h-full object-cover"
+        style="min-height: 300px;"
+      />
+    </div>
+
+    <!-- Text Column -->
+    <div class="lg:w-1/2 bg-obc-cream flex flex-col gap-5 p-8 lg:p-14 justify-center">
+      <span class="text-obc-orange text-xs font-semibold tracking-[2px] uppercase">OUR STORY</span>
+      <h2 class="font-heading text-obc-dark text-3xl lg:text-4xl leading-tight">A Legacy Built on Delivery</h2>
+      <div class="w-12 h-[3px] bg-obc-orange"></div>
+
+      <p class="text-obc-body text-sm leading-relaxed">
+        Omphile Botshelo Construction is a proudly South African company with a proven track record spanning more than 15 years. We specialise in civil engineering, building construction, infrastructure development, and renovation projects across the public and private sectors.
+      </p>
+      <p class="text-obc-body text-sm leading-relaxed">
+        With deep roots in our communities, we have built lasting partnerships with government departments, municipalities, and private enterprises. Our team brings together skilled professionals committed to delivering projects on time, within budget, and to the highest standards.
+      </p>
+      <p class="text-obc-body text-sm leading-relaxed">
+        Our established reputation for reliability and compliance makes us the trusted partner of choice for projects of every scale — from community infrastructure to large-scale government contracts across South Africa.
+      </p>
+
+      <!-- Checklist -->
+      <div class="flex flex-col gap-3 mt-1">
+        <div class="flex items-center gap-3">
+          <CircleCheck class="text-obc-orange flex-shrink-0" size={18} />
+          <span class="text-obc-dark text-sm font-medium">15+ Years of industry experience</span>
+        </div>
+        <div class="flex items-center gap-3">
+          <CircleCheck class="text-obc-orange flex-shrink-0" size={18} />
+          <span class="text-obc-dark text-sm font-medium">120+ Projects successfully completed</span>
+        </div>
+        <div class="flex items-center gap-3">
+          <CircleCheck class="text-obc-orange flex-shrink-0" size={18} />
+          <span class="text-obc-dark text-sm font-medium">CIDB Grade 4 Registered</span>
+        </div>
+      </div>
+
+      <div class="mt-2">
+        <a
+          href="/about"
+          class="inline-block bg-obc-orange text-obc-cream text-sm font-bold tracking-wider px-7 py-3 uppercase hover:bg-orange-700 transition-colors"
+        >
+          Learn More About Us
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Values Strip -->
+  <div class="bg-obc-tan py-5 flex justify-center flex-wrap">
+    <div class="flex items-center flex-wrap justify-center">
+      <span class="text-obc-dark text-xs font-semibold tracking-[2px] px-8 uppercase py-2">INTEGRITY</span>
+      <div class="w-px h-4 bg-obc-dark/20"></div>
+      <span class="text-obc-dark text-xs font-semibold tracking-[2px] px-8 uppercase py-2">EXCELLENCE</span>
+      <div class="w-px h-4 bg-obc-dark/20"></div>
+      <span class="text-obc-dark text-xs font-semibold tracking-[2px] px-8 uppercase py-2">COMMUNITY</span>
+      <div class="w-px h-4 bg-obc-dark/20"></div>
+      <span class="text-obc-dark text-xs font-semibold tracking-[2px] px-8 uppercase py-2">DELIVERY</span>
+    </div>
+  </div>
+
+  <!-- ===== SERVICES SECTION ===== -->
+  <section class="bg-obc-tan py-16 px-6 lg:px-20 flex flex-col items-center gap-10">
+    <div class="flex flex-col items-center gap-3 text-center">
+      <span class="text-obc-orange text-xs font-semibold tracking-[2px] uppercase">OUR SERVICES</span>
+      <h2 class="font-heading text-obc-dark text-3xl lg:text-4xl">Built for Every Scale of Construction</h2>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 w-full">
+      <!-- Card 1: Civil Works -->
+      <div class="bg-obc-cream p-7 flex flex-col gap-4">
+        <HardHat class="text-obc-orange" size={28} />
+        <h3 class="font-heading text-obc-dark text-xl">Civil Works</h3>
+        <p class="text-obc-body text-sm leading-relaxed flex-1">
+          Roads, stormwater, earthworks, and bulk infrastructure — engineered for durability and built to last.
+        </p>
+        <a href="/services" class="text-obc-orange text-xs font-bold tracking-wider uppercase hover:underline">LEARN MORE →</a>
+      </div>
+
+      <!-- Card 2: Building Construction -->
+      <div class="bg-obc-cream p-7 flex flex-col gap-4">
+        <Building2 class="text-obc-orange" size={28} />
+        <h3 class="font-heading text-obc-dark text-xl">Building Construction</h3>
+        <p class="text-obc-body text-sm leading-relaxed flex-1">
+          Residential, commercial, and government facilities constructed with precision and full regulatory compliance.
+        </p>
+        <a href="/services" class="text-obc-orange text-xs font-bold tracking-wider uppercase hover:underline">LEARN MORE →</a>
+      </div>
+
+      <!-- Card 3: Infrastructure -->
+      <div class="bg-obc-cream p-7 flex flex-col gap-4">
+        <Landmark class="text-obc-orange" size={28} />
+        <h3 class="font-heading text-obc-dark text-xl">Infrastructure</h3>
+        <p class="text-obc-body text-sm leading-relaxed flex-1">
+          Water, sanitation, and public infrastructure projects that serve and uplift communities across South Africa.
+        </p>
+        <a href="/services" class="text-obc-orange text-xs font-bold tracking-wider uppercase hover:underline">LEARN MORE →</a>
+      </div>
+
+      <!-- Card 4: Renovations & Maintenance -->
+      <div class="bg-obc-cream p-7 flex flex-col gap-4">
+        <Wrench class="text-obc-orange" size={28} />
+        <h3 class="font-heading text-obc-dark text-xl">Renovations & Maintenance</h3>
+        <p class="text-obc-body text-sm leading-relaxed flex-1">
+          Upgrading and maintaining existing structures to meet modern standards, safely and efficiently.
+        </p>
+        <a href="/services" class="text-obc-orange text-xs font-bold tracking-wider uppercase hover:underline">LEARN MORE →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== HOW WE WORK ===== -->
+  <section class="bg-obc-dark py-20 px-6 lg:px-24 flex flex-col items-center gap-16">
+    <div class="flex flex-col items-center gap-4 text-center">
+      <span class="text-obc-orange text-xs font-semibold tracking-[2px] uppercase">OUR PROCESS</span>
+      <h2 class="font-heading text-obc-cream text-4xl lg:text-5xl">From Brief to Handover</h2>
+      <p class="text-obc-muted max-w-xl text-center leading-relaxed">
+        We manage every phase of your project with transparency, expertise, and accountability — so you can focus on what matters most.
+      </p>
+    </div>
+
+    <!-- Steps -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10 w-full">
+      <!-- Step 01 -->
+      <div class="flex flex-col items-center gap-4">
+        <div class="w-[52px] h-[52px] rounded-full bg-obc-orange flex items-center justify-center flex-shrink-0">
+          <span class="font-heading text-white text-lg leading-none">01</span>
+        </div>
+        <h4 class="text-obc-cream text-sm font-bold text-center uppercase tracking-wide">Project Brief & Assessment</h4>
+        <p class="text-obc-muted text-[13px] text-center leading-relaxed">
+          We engage with you to fully understand your requirements, site conditions, and project objectives.
+        </p>
+      </div>
+
+      <!-- Step 02 -->
+      <div class="flex flex-col items-center gap-4">
+        <div class="w-[52px] h-[52px] rounded-full bg-obc-orange flex items-center justify-center flex-shrink-0">
+          <span class="font-heading text-white text-lg leading-none">02</span>
+        </div>
+        <h4 class="text-obc-cream text-sm font-bold text-center uppercase tracking-wide">Planning & Compliance</h4>
+        <p class="text-obc-muted text-[13px] text-center leading-relaxed">
+          Detailed project planning, scheduling, and ensuring all regulatory and compliance requirements are met upfront.
+        </p>
+      </div>
+
+      <!-- Step 03 -->
+      <div class="flex flex-col items-center gap-4">
+        <div class="w-[52px] h-[52px] rounded-full bg-obc-orange flex items-center justify-center flex-shrink-0">
+          <span class="font-heading text-white text-lg leading-none">03</span>
+        </div>
+        <h4 class="text-obc-cream text-sm font-bold text-center uppercase tracking-wide">Procurement & Mobilisation</h4>
+        <p class="text-obc-muted text-[13px] text-center leading-relaxed">
+          Sourcing quality materials and mobilising our skilled team and resources for efficient site deployment.
+        </p>
+      </div>
+
+      <!-- Step 04 -->
+      <div class="flex flex-col items-center gap-4">
+        <div class="w-[52px] h-[52px] rounded-full bg-obc-orange flex items-center justify-center flex-shrink-0">
+          <span class="font-heading text-white text-lg leading-none">04</span>
+        </div>
+        <h4 class="text-obc-cream text-sm font-bold text-center uppercase tracking-wide">Construction & Oversight</h4>
+        <p class="text-obc-muted text-[13px] text-center leading-relaxed">
+          Rigorous on-site management and quality control throughout the construction phase to ensure excellence.
+        </p>
+      </div>
+
+      <!-- Step 05 -->
+      <div class="flex flex-col items-center gap-4">
+        <div class="w-[52px] h-[52px] rounded-full bg-obc-orange flex items-center justify-center flex-shrink-0">
+          <span class="font-heading text-white text-lg leading-none">05</span>
+        </div>
+        <h4 class="text-obc-cream text-sm font-bold text-center uppercase tracking-wide">Handover & Maintenance</h4>
+        <p class="text-obc-muted text-[13px] text-center leading-relaxed">
+          Smooth project handover with full documentation, and ongoing maintenance support as required.
+        </p>
+      </div>
+    </div>
+
+    <!-- CTA Row -->
+    <div class="flex flex-col sm:flex-row items-center gap-6 mt-4">
+      <span class="font-heading text-obc-cream text-xl lg:text-2xl">Ready to start your project?</span>
+      <a
+        href="/contact"
+        class="bg-obc-orange text-obc-cream text-xs font-bold tracking-widest px-8 py-4 uppercase hover:bg-orange-700 transition-colors"
+      >
+        START YOUR PROJECT
+      </a>
+    </div>
+  </section>
+
+  <!-- ===== FEATURED PROJECTS ===== -->
+  <section class="bg-obc-cream py-16 px-6 lg:px-20">
+    <div class="flex flex-col gap-8">
+      <div class="flex flex-col gap-3">
+        <span class="text-obc-orange text-xs font-semibold tracking-[2px] uppercase">FEATURED PROJECTS</span>
+        <h2 class="font-heading text-obc-dark text-3xl lg:text-4xl">Work That Speaks for Itself</h2>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-5">
+        <!-- Project 1 -->
+        <div class="bg-obc-warm overflow-hidden">
+          <div class="h-[220px] overflow-hidden">
+            <img
+              src="https://images.unsplash.com/photo-1709735133497-451ee294f948?w=600&q=80"
+              alt="N14 Highway Upgrades"
+              class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+            />
+          </div>
+          <div class="p-5 flex flex-col gap-3">
+            <span class="inline-block bg-obc-dark text-obc-cream text-[10px] font-bold tracking-widest px-3 py-1 uppercase w-fit">
+              GOVERNMENT
+            </span>
+            <h3 class="font-heading text-obc-dark text-lg">N14 Highway Upgrades</h3>
+            <p class="text-obc-body text-sm">North West Province</p>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="bg-obc-warm overflow-hidden">
+          <div class="h-[220px] overflow-hidden">
+            <img
+              src="https://images.unsplash.com/photo-1562267368-3d6e04e053c0?w=600&q=80"
+              alt="Sandton Office Complex"
+              class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+            />
+          </div>
+          <div class="p-5 flex flex-col gap-3">
+            <span class="inline-block bg-obc-body text-obc-cream text-[10px] font-bold tracking-widest px-3 py-1 uppercase w-fit">
+              PRIVATE
+            </span>
+            <h3 class="font-heading text-obc-dark text-lg">Sandton Office Complex</h3>
+            <p class="text-obc-body text-sm">Johannesburg, Gauteng</p>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="bg-obc-warm overflow-hidden">
+          <div class="h-[220px] overflow-hidden">
+            <img
+              src="https://images.unsplash.com/photo-1701146125128-b4e1051e8c68?w=600&q=80"
+              alt="Tshwane Water Infrastructure"
+              class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+            />
+          </div>
+          <div class="p-5 flex flex-col gap-3">
+            <span class="inline-block bg-obc-orange text-obc-cream text-[10px] font-bold tracking-widest px-3 py-1 uppercase w-fit">
+              GOVERNMENT
+            </span>
+            <h3 class="font-heading text-obc-dark text-lg">Tshwane Water Infrastructure</h3>
+            <p class="text-obc-body text-sm">Pretoria, Gauteng</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex justify-center mt-2">
+        <a
+          href="/projects"
+          class="border-2 border-obc-dark text-obc-dark text-xs font-bold tracking-widest px-8 py-4 uppercase hover:bg-obc-dark hover:text-obc-cream transition-colors"
+        >
+          VIEW ALL PROJECTS
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== COMPLIANCE HIGHLIGHTS ===== -->
+  <section class="bg-obc-tan py-16 lg:py-[72px] px-6 lg:px-20">
+    <div class="flex flex-col lg:flex-row gap-8 lg:gap-16 items-start">
+      <!-- Left Column -->
+      <div class="max-w-md flex flex-col gap-7">
+        <span class="text-obc-orange text-xs font-semibold tracking-[2px] uppercase">TENDER-READY</span>
+        <h2 class="font-heading text-obc-dark text-3xl lg:text-4xl leading-tight">Every Document. Always Current.</h2>
+        <p class="text-obc-body text-[15px] leading-relaxed">
+          Procurement officers and tender evaluators can rely on Omphile Botshelo Construction for a complete and current compliance profile. We maintain all required certifications, registrations, and accreditations — so your evaluation process is seamless.
+        </p>
+        <div>
+          <a
+            href="/compliance"
+            class="inline-block bg-obc-orange text-obc-cream text-xs font-bold tracking-widest px-7 py-4 uppercase hover:bg-orange-700 transition-colors"
+          >
+            View Full Compliance Page
+          </a>
+        </div>
+      </div>
+
+      <!-- Right Column: Compliance Cards -->
+      <div class="flex-1 grid grid-cols-2 lg:grid-cols-3 gap-4">
+        <!-- Card 1 -->
+        <div class="bg-white p-5 flex flex-col gap-3">
+          <BadgeCheck class="text-obc-orange" size={22} />
+          <span class="text-obc-dark text-[13px] font-semibold">CIDB Grading Certificate</span>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="bg-white p-5 flex flex-col gap-3">
+          <Users class="text-obc-orange" size={22} />
+          <span class="text-obc-dark text-[13px] font-semibold">B-BBEE Certificate</span>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="bg-white p-5 flex flex-col gap-3">
+          <FileCheck class="text-obc-orange" size={22} />
+          <span class="text-obc-dark text-[13px] font-semibold">Tax Clearance</span>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="bg-white p-5 flex flex-col gap-3">
+          <Database class="text-obc-orange" size={22} />
+          <span class="text-obc-dark text-[13px] font-semibold">CSD Registration</span>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="bg-white p-5 flex flex-col gap-3">
+          <Shield class="text-obc-orange" size={22} />
+          <span class="text-obc-dark text-[13px] font-semibold">COIDA Letter</span>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="bg-white p-5 flex flex-col gap-3">
+          <Building2 class="text-obc-orange" size={22} />
+          <span class="text-obc-dark text-[13px] font-semibold">CIPC Registration</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== WHY OBC ===== -->
+  <section class="bg-obc-dark py-16 px-6 lg:px-20 flex flex-col items-center gap-12">
+    <div class="flex flex-col items-center gap-3 text-center">
+      <span class="text-obc-orange text-xs font-semibold tracking-[2px] uppercase">WHY OMPHILE BOTSHELO</span>
+      <h2 class="font-heading text-obc-cream text-3xl lg:text-4xl">The Advantage You Need</h2>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-10 w-full max-w-5xl">
+      <!-- Item 1 -->
+      <div class="flex flex-col gap-4">
+        <Award class="text-obc-orange" size={32} />
+        <h3 class="font-heading text-obc-cream text-xl">Established Track Record</h3>
+        <p class="text-obc-muted text-[15px] leading-relaxed">
+          Over 15 years of successful project delivery across civil works, building construction, and infrastructure — with more than 120 completed projects to our name.
+        </p>
+      </div>
+
+      <!-- Item 2 -->
+      <div class="flex flex-col gap-4">
+        <ShieldCheck class="text-obc-orange" size={32} />
+        <h3 class="font-heading text-obc-cream text-xl">Compliance-Ready</h3>
+        <p class="text-obc-muted text-[15px] leading-relaxed">
+          Our full suite of up-to-date compliance documentation — CIDB, B-BBEE, CSD, COIDA, and more — means zero delays in the tender and procurement process.
+        </p>
+      </div>
+
+      <!-- Item 3 -->
+      <div class="flex flex-col gap-4">
+        <Layers class="text-obc-orange" size={32} />
+        <h3 class="font-heading text-obc-cream text-xl">Scalable Delivery</h3>
+        <p class="text-obc-muted text-[15px] leading-relaxed">
+          From small community upgrades to multi-million rand government contracts, our experienced team and proven processes scale to meet any project demand.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TESTIMONIALS ===== -->
+  <section class="bg-obc-cream">
+    <!-- Top: Cards -->
+    <div class="py-20 px-6 lg:px-[120px] flex flex-col items-center gap-14">
+      <div class="flex flex-col items-center gap-3 text-center">
+        <span class="text-obc-orange text-xs font-semibold tracking-[2px] uppercase">WHAT OUR CLIENTS SAY</span>
+        <h2 class="font-heading text-obc-dark text-3xl lg:text-4xl max-w-2xl text-center leading-tight">
+          Trusted by Government & Private Sector Alike
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 w-full">
+        <!-- Testimonial 1 -->
+        <div class="bg-obc-tan p-8 flex flex-col gap-5">
+          <span class="font-heading text-obc-orange text-7xl leading-none">"</span>
+          <p class="text-obc-dark text-sm leading-relaxed italic">
+            Omphile Botshelo Construction delivered our municipal infrastructure project on time and within budget. Their team maintained full compliance throughout, and communication was excellent from start to finish. We will not hesitate to work with them again.
+          </p>
+          <div class="flex flex-col gap-1 mt-auto">
+            <span class="text-obc-dark font-semibold text-sm">Thabo Molefe</span>
+            <span class="text-obc-body text-xs">Director of Infrastructure, Tshwane Municipality</span>
+            <span class="inline-block bg-obc-orange text-obc-cream text-[10px] font-bold tracking-widest px-3 py-1 uppercase w-fit mt-2">
+              GOVERNMENT
+            </span>
+          </div>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div class="bg-obc-tan p-8 flex flex-col gap-5">
+          <span class="font-heading text-obc-orange text-7xl leading-none">"</span>
+          <p class="text-obc-dark text-sm leading-relaxed italic">
+            We engaged OBC for our commercial mixed-use development and were thoroughly impressed by their professionalism, attention to detail, and commitment to quality. The project was delivered to a high standard and we have since recommended them to several of our partners.
+          </p>
+          <div class="flex flex-col gap-1 mt-auto">
+            <span class="text-obc-dark font-semibold text-sm">Priya Naidoo</span>
+            <span class="text-obc-body text-xs">Property Development Manager, Growthpoint Properties</span>
+            <span class="inline-block bg-obc-body text-obc-cream text-[10px] font-bold tracking-widest px-3 py-1 uppercase w-fit mt-2">
+              PRIVATE
+            </span>
+          </div>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div class="bg-obc-tan p-8 flex flex-col gap-5">
+          <span class="font-heading text-obc-orange text-7xl leading-none">"</span>
+          <p class="text-obc-dark text-sm leading-relaxed italic">
+            Our department requires contractors who meet the highest standards of compliance and delivery. Omphile Botshelo Construction managed a R45-million road rehabilitation contract with exemplary performance, maintaining safety standards and delivering ahead of schedule.
+          </p>
+          <div class="flex flex-col gap-1 mt-auto">
+            <span class="text-obc-dark font-semibold text-sm">Sipho Dlamini</span>
+            <span class="text-obc-body text-xs">Deputy Director, Department of Public Works</span>
+            <span class="inline-block bg-obc-orange text-obc-cream text-[10px] font-bold tracking-widest px-3 py-1 uppercase w-fit mt-2">
+              GOVERNMENT
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Stats Row -->
+    <div class="bg-obc-dark py-16 px-6 lg:px-[120px]">
+      <div class="flex flex-wrap justify-between gap-8">
+        <div class="flex flex-col items-center gap-1 flex-1 min-w-[120px]">
+          <span class="font-heading text-obc-orange text-5xl">98%</span>
+          <span class="text-obc-muted text-xs tracking-wider font-semibold uppercase">ON-TIME DELIVERY</span>
+        </div>
+        <div class="hidden lg:block w-px h-12 bg-obc-divider self-center"></div>
+        <div class="flex flex-col items-center gap-1 flex-1 min-w-[120px]">
+          <span class="font-heading text-obc-orange text-5xl">120+</span>
+          <span class="text-obc-muted text-xs tracking-wider font-semibold uppercase">PROJECTS COMPLETED</span>
+        </div>
+        <div class="hidden lg:block w-px h-12 bg-obc-divider self-center"></div>
+        <div class="flex flex-col items-center gap-1 flex-1 min-w-[120px]">
+          <span class="font-heading text-obc-orange text-5xl">R500M+</span>
+          <span class="text-obc-muted text-xs tracking-wider font-semibold uppercase">CONTRACT VALUE DELIVERED</span>
+        </div>
+        <div class="hidden lg:block w-px h-12 bg-obc-divider self-center"></div>
+        <div class="flex flex-col items-center gap-1 flex-1 min-w-[120px]">
+          <span class="font-heading text-obc-orange text-5xl">15+</span>
+          <span class="text-obc-muted text-xs tracking-wider font-semibold uppercase">YEARS EXPERIENCE</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PARTNERS & CLIENTS ===== -->
+  <section class="bg-obc-dark">
+    <!-- Header -->
+    <div class="py-16 px-6 lg:px-[120px] flex flex-col gap-4">
+      <span class="text-obc-orange text-xs font-semibold tracking-[2px] uppercase">PARTNERSHIPS & CLIENTS</span>
+      <h2 class="font-heading text-obc-cream text-3xl lg:text-4xl max-w-3xl leading-tight">
+        Trusted Partners in South Africa's Development
+      </h2>
+      <p class="text-obc-muted text-base lg:text-lg max-w-2xl leading-relaxed">
+        We have proudly delivered projects for government departments, municipalities, parastatals, and leading private enterprises across South Africa.
+      </p>
+      <div class="w-[60px] h-[2px] bg-obc-orange mt-2"></div>
+    </div>
+
+    <!-- Category Cards -->
+    <div class="px-6 lg:px-[120px] pb-12 grid grid-cols-1 lg:grid-cols-3 gap-6">
+      <!-- Card: Government -->
+      <div class="bg-obc-card-dark p-8 flex flex-col gap-3">
+        <h3 class="font-heading text-obc-cream text-xl">Government</h3>
+        <p class="text-obc-muted text-sm leading-relaxed">
+          National and provincial government departments, municipalities, and parastatals — from the Department of Public Works to local municipalities across Gauteng and North West.
+        </p>
+      </div>
+
+      <!-- Card: Private Sector -->
+      <div class="bg-obc-card-dark p-8 flex flex-col gap-3">
+        <h3 class="font-heading text-obc-cream text-xl">Private Sector</h3>
+        <p class="text-obc-muted text-sm leading-relaxed">
+          Leading property developers, commercial enterprises, and private investors who require a reliable, compliant construction partner for projects of all sizes.
+        </p>
+      </div>
+
+      <!-- Card: Supply Chain Partners -->
+      <div class="bg-obc-card-dark p-8 flex flex-col gap-3">
+        <h3 class="font-heading text-obc-cream text-xl">Supply Chain Partners</h3>
+        <p class="text-obc-muted text-sm leading-relaxed">
+          A trusted network of materials suppliers, subcontractors, and specialist consultants — all vetted for quality and compliance to support seamless project delivery.
+        </p>
+      </div>
+    </div>
+
+    <!-- Logo Strip -->
+    <div class="bg-[#232526] py-10 px-6 lg:px-[120px] flex items-center justify-center">
+      <span class="text-obc-body text-xs tracking-widest uppercase text-center">
+        REPRESENTING CLIENTS ACROSS GOVERNMENT & PRIVATE SECTORS
+      </span>
+    </div>
+
+    <!-- Partners CTA -->
+    <div class="bg-obc-orange py-12 px-6 lg:px-[120px] flex flex-col sm:flex-row justify-between items-center gap-6">
+      <div class="flex flex-col gap-1 text-center sm:text-left">
+        <span class="font-heading text-obc-cream text-2xl lg:text-3xl">Become a Project Partner</span>
+        <span class="text-obc-tan text-sm">Join our growing network of government and private sector clients.</span>
+      </div>
+      <a
+        href="/contact"
+        class="bg-obc-cream text-obc-orange text-xs font-bold tracking-widest px-8 py-4 uppercase hover:bg-white transition-colors flex-shrink-0"
+      >
+        GET IN TOUCH
+      </a>
+    </div>
+
+    <!-- Accreditation Strip -->
+    <div class="bg-obc-deep py-6 px-6 lg:px-[120px] flex flex-wrap justify-center gap-8 lg:gap-12">
+      <span class="text-obc-muted text-xs tracking-widest uppercase font-semibold">CIDB Grade 4CE</span>
+      <span class="text-obc-muted text-xs tracking-widest uppercase font-semibold">B-BBEE Level 1</span>
+      <span class="text-obc-muted text-xs tracking-widest uppercase font-semibold">CSD Registered</span>
+      <span class="text-obc-muted text-xs tracking-widest uppercase font-semibold">COIDA Compliant</span>
+    </div>
+  </section>
+
+  <!-- ===== CTA BANNER ===== -->
+  <CTABanner
+    heading="Ready to Build?<br/>Let's Talk."
+    subtext="Contact us today to discuss your next project — from concept to completion, we deliver."
+    primaryLabel="CONTACT US TODAY"
+    primaryHref="/contact"
+  />
+
+  <!-- ===== FOOTER ===== -->
+  <Footer active="Home" />
+</Layout>

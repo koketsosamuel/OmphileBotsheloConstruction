@@ -1,0 +1,231 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import CTABanner from '../components/CTABanner.astro';
+
+const projects = [
+  {
+    img: 'https://images.unsplash.com/photo-1587582423116-ec07293f0395?w=600&q=80',
+    location: 'JOHANNESBURG',
+    category: 'GOVERNMENT',
+    title: 'Soweto Community Health Centre',
+    description: 'New 120-bed primary healthcare facility with outpatient wards, pharmacy and emergency unit.',
+    year: 'COMPLETED 2022',
+  },
+  {
+    img: 'https://images.unsplash.com/photo-1545558014-8692077e9b5c?w=600&q=80',
+    location: 'LIMPOPO',
+    category: 'GOVERNMENT',
+    title: 'N1 Highway Rehabilitation, Phase 2',
+    description: '18km road rehabilitation including stormwater drainage, signage and two bridge upgrades.',
+    year: 'COMPLETED 2023',
+  },
+  {
+    img: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&q=80',
+    location: 'CAPE TOWN',
+    category: 'PRIVATE',
+    title: 'Vredehoek Residential Estate',
+    description: '32-unit luxury residential development with clubhouse, landscaping and perimeter security.',
+    year: 'COMPLETED 2021',
+  },
+  {
+    img: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&q=80',
+    location: 'DURBAN',
+    category: 'GOVERNMENT',
+    title: 'eThekwini Water & Sanitation Plant',
+    description: 'Civil works for 50ML/day water treatment upgrade serving 200,000 households.',
+    year: 'COMPLETED 2023',
+  },
+  {
+    img: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600&q=80',
+    location: 'PRETORIA',
+    category: 'PRIVATE',
+    title: 'Tshwane Corporate Park – Block C',
+    description: '5-storey commercial office fit-out with parking structure, generator plant and server room.',
+    year: 'COMPLETED 2020',
+  },
+  {
+    img: 'https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=600&q=80',
+    location: 'EASTERN CAPE',
+    category: 'GOVERNMENT',
+    title: 'Mthatha Secondary School Rebuild',
+    description: 'Full reconstruction of 28-classroom school with library, science labs and sports courts.',
+    year: 'COMPLETED 2022',
+  },
+  {
+    img: 'https://images.unsplash.com/photo-1513467535987-fd81bc7d62f8?w=600&q=80',
+    location: 'MPUMALANGA',
+    category: 'CIVIL WORKS',
+    title: 'Komati River Bridge Crossing',
+    description: '140m dual-carriageway bridge with flood-proof piers, expansion joints and full abutment works.',
+    year: 'COMPLETED 2021',
+  },
+  {
+    img: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=600&q=80',
+    location: 'RUSTENBURG',
+    category: 'PRIVATE',
+    title: 'Platinum Valley Logistics Hub',
+    description: '12,000m² warehouse and distribution complex with truck yard, weighbridge and office block.',
+    year: 'COMPLETED 2024',
+  },
+  {
+    img: 'https://images.unsplash.com/photo-1509391366360-2e959784a276?w=600&q=80',
+    location: 'NORTHERN CAPE',
+    category: 'GOVERNMENT',
+    title: 'Upington Solar Power Access Road',
+    description: '22km access road construction for solar IPP facility including culverts and dust suppression.',
+    year: 'COMPLETED 2024',
+  },
+];
+
+function getCategoryBg(category: string): string {
+  if (category === 'GOVERNMENT' || category === 'CIVIL WORKS') return 'bg-obc-orange';
+  return 'bg-obc-body';
+}
+---
+
+<Layout title="Our Projects" description="Explore Omphile Botshelo Construction's track record of delivery across South Africa — government, private and civil works projects.">
+
+  <!-- Navbar -->
+  <Navbar active="Projects" />
+
+  <!-- Hero -->
+  <section class="relative bg-obc-dark h-[250px] lg:h-[340px] flex flex-col justify-center gap-4 px-6 lg:px-14 overflow-hidden">
+    <h1 class="font-heading text-obc-cream text-4xl lg:text-6xl font-bold">Our Projects</h1>
+    <p class="text-obc-tan text-lg">A track record of delivery across South Africa</p>
+    <!-- Accent bar -->
+    <div class="w-[60px] h-[4px] bg-obc-orange lg:absolute lg:bottom-0 lg:left-14"></div>
+  </section>
+
+  <!-- Filter Bar -->
+  <div class="bg-obc-cream">
+    <div class="h-[72px] px-6 lg:px-14 flex items-center gap-3">
+      <span class="text-obc-muted text-xs font-semibold tracking-wider shrink-0">FILTER BY:</span>
+      <div class="flex gap-2 overflow-x-auto">
+        <button class="bg-obc-orange text-obc-cream text-xs font-semibold px-4 py-2 cursor-pointer shrink-0">ALL</button>
+        <button class="bg-obc-cream text-obc-body border border-obc-tan text-xs font-semibold px-4 py-2 cursor-pointer shrink-0">GOVERNMENT</button>
+        <button class="bg-obc-cream text-obc-body border border-obc-tan text-xs font-semibold px-4 py-2 cursor-pointer shrink-0">PRIVATE</button>
+        <button class="bg-obc-cream text-obc-body border border-obc-tan text-xs font-semibold px-4 py-2 cursor-pointer shrink-0">CIVIL WORKS</button>
+        <button class="bg-obc-cream text-obc-body border border-obc-tan text-xs font-semibold px-4 py-2 cursor-pointer shrink-0">BUILDING</button>
+        <button class="bg-obc-cream text-obc-body border border-obc-tan text-xs font-semibold px-4 py-2 cursor-pointer shrink-0">INFRASTRUCTURE</button>
+      </div>
+    </div>
+    <div class="h-px bg-obc-tan"></div>
+  </div>
+
+  <!-- Projects Grid -->
+  <section class="bg-obc-cream px-6 lg:px-14 py-12 flex flex-col gap-5">
+    <!-- Header row -->
+    <div class="flex justify-between items-center">
+      <h2 class="font-heading text-obc-dark text-2xl font-bold">Selected Projects</h2>
+      <span class="text-obc-muted text-sm">9 projects</span>
+    </div>
+
+    <!-- Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+      {projects.map((project) => (
+        <div class="bg-obc-tan overflow-hidden">
+          <img
+            src={project.img}
+            alt={project.title}
+            class="h-[200px] w-full object-cover"
+          />
+          <div class="p-5 flex flex-col gap-3">
+            <!-- Tags -->
+            <div class="flex gap-2">
+              <span class="bg-obc-dark text-obc-cream text-[9px] font-semibold tracking-wider px-2.5 py-1">
+                {project.location}
+              </span>
+              <span class={`${getCategoryBg(project.category)} text-obc-cream text-[9px] font-semibold tracking-wider px-2.5 py-1`}>
+                {project.category}
+              </span>
+            </div>
+            <!-- Title -->
+            <h3 class="font-heading text-obc-dark text-lg font-bold">{project.title}</h3>
+            <!-- Description -->
+            <p class="text-obc-body text-[13px] leading-relaxed">{project.description}</p>
+            <!-- Year -->
+            <span class="text-obc-muted text-xs font-semibold tracking-wider">{project.year}</span>
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- Featured Project -->
+  <section class="bg-obc-dark px-6 lg:px-14 py-12 flex flex-col gap-6">
+    <span class="text-obc-muted text-xs font-semibold tracking-[2px]">FEATURED PROJECT</span>
+
+    <div class="bg-[#1a1a1a] flex flex-col lg:flex-row overflow-hidden h-auto lg:h-[420px]">
+      <!-- Image -->
+      <img
+        src="https://images.unsplash.com/photo-1709031123386-581f06e5cc9a?w=800&q=80"
+        alt="Nasrec Multi-Purpose Sports Arena"
+        class="w-full lg:w-[560px] h-[250px] lg:h-full object-cover flex-shrink-0"
+      />
+
+      <!-- Details -->
+      <div class="flex-1 p-8 lg:p-10 flex flex-col gap-5">
+        <!-- Tags -->
+        <div class="flex gap-2 flex-wrap">
+          <span class="bg-obc-orange text-obc-cream text-[9px] font-semibold tracking-wider px-2.5 py-1">GOVERNMENT</span>
+          <span class="bg-obc-dark border border-obc-body text-obc-cream text-[9px] font-semibold tracking-wider px-2.5 py-1">COMPLETED 2023</span>
+          <span class="bg-obc-dark border border-obc-body text-obc-cream text-[9px] font-semibold tracking-wider px-2.5 py-1">JOHANNESBURG</span>
+        </div>
+
+        <!-- Title -->
+        <h2 class="font-heading text-obc-cream text-2xl lg:text-3xl font-bold">Nasrec Multi-Purpose Sports Arena</h2>
+
+        <!-- Stats row -->
+        <div class="flex gap-10 flex-wrap">
+          <div class="flex flex-col gap-1">
+            <span class="text-obc-muted text-[10px] tracking-wider font-semibold uppercase">CONTRACT VALUE</span>
+            <span class="font-heading text-obc-tan text-xl">R 480 Million</span>
+          </div>
+          <div class="flex flex-col gap-1">
+            <span class="text-obc-muted text-[10px] tracking-wider font-semibold uppercase">DURATION</span>
+            <span class="font-heading text-obc-tan text-xl">36 Months</span>
+          </div>
+          <div class="flex flex-col gap-1">
+            <span class="text-obc-muted text-[10px] tracking-wider font-semibold uppercase">SECTOR</span>
+            <span class="font-heading text-obc-tan text-xl">Sports &amp; Civic</span>
+          </div>
+        </div>
+
+        <!-- Scope -->
+        <span class="text-obc-muted text-[10px] tracking-wider font-semibold uppercase">PROJECT SCOPE</span>
+        <p class="text-obc-tan text-sm leading-relaxed">
+          Design and construction of 35,000-seat multi-purpose arena for sport and entertainment events. Scope includes structural steelwork, retractable roof system, hospitality suites, media facilities and full civil infrastructure.
+        </p>
+
+        <!-- Button -->
+        <a href="#" class="bg-obc-orange text-obc-cream text-xs font-semibold tracking-wider px-6 py-3 w-fit">
+          VIEW FULL CASE STUDY
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Banner -->
+  <section class="bg-obc-orange h-auto lg:h-[180px] px-6 lg:px-14 py-10 lg:py-0 flex flex-col lg:flex-row justify-between items-center gap-6">
+    <!-- Left -->
+    <div class="flex flex-col gap-2 text-center lg:text-left">
+      <h2 class="font-heading text-obc-cream text-xl lg:text-[28px]">Interested in our capabilities?</h2>
+      <p class="text-obc-tan text-[15px]">Request our company profile or speak with our project team.</p>
+    </div>
+    <!-- Right -->
+    <div class="flex gap-4 flex-wrap justify-center">
+      <a href="#" class="bg-obc-cream text-obc-orange text-xs font-semibold tracking-wider px-6 py-3">
+        DOWNLOAD PROFILE
+      </a>
+      <a href="/contact" class="border border-obc-cream text-obc-cream text-xs font-semibold tracking-wider px-6 py-3">
+        CONTACT US
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <Footer active="Projects" />
+
+</Layout>
