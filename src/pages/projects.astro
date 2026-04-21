@@ -10,48 +10,54 @@ const projects = [
     location: 'MAHIKENG',
     category: 'CIVIL WORKS',
     title: 'Outfall Sewer Pipeline Repair Works',
-    description: 'Sub construction of outfall sewer pipeline repair works. Contract value: R1,532,229.98.',
+    description: 'Sub construction of outfall sewer pipeline repair works.',
     year: '2025–2026',
+    value: 'R1,532,229.98',
   },
   {
     img: '/images/projects-2.jpg',
     location: 'MAHIKENG',
     category: 'GOVERNMENT',
     title: 'Mahikeng Veterinary Office Renovations',
-    description: 'Renovations and repairs at Mahikeng Veterinary Office. Contract value: R999,000.00.',
+    description: 'Renovations and repairs at Mahikeng Veterinary Office.',
     year: 'COMPLETED 2022',
+    value: 'R999,000.00',
   },
   {
     img: '/images/projects-3.jpg',
     location: 'IKAGENG',
     category: 'GOVERNMENT',
     title: 'Ikageng Secondary School Renovation',
-    description: 'Sub construction renovation of Ikageng Secondary School (via OPT Lerato Trading). Contract value: R767,000.00.',
+    description: 'Sub construction renovation of Ikageng Secondary School (via OPT Lerato Trading).',
     year: 'NORTH WEST',
+    value: 'R767,000.00',
   },
   {
     img: '/images/projects-4.jpg',
     location: 'MAHIKENG',
     category: 'BUILDING',
     title: 'Tuck Shop Renovation at Old BPG',
-    description: 'Renovation of tuck shop at Old BPG. Contract value: R93,322.00.',
+    description: 'Renovation of tuck shop at Old BPG.',
     year: 'NORTH WEST',
+    value: 'R93,322.00',
   },
   {
     img: '/images/projects-5.jpg',
     location: 'NORTH WEST',
     category: 'CIVIL WORKS',
     title: 'Concrete Kerbs & Drains R49 and D512',
-    description: 'Sub contractor — concrete kerbs, channelling and drains on R49 and D512 (via Phezulu Plant). Contract value: R448,020.70.',
+    description: 'Sub contractor — concrete kerbs, channelling and drains on R49 and D512 (via Phezulu Plant).',
     year: 'NORTH WEST',
+    value: 'R448,020.70',
   },
   {
     img: '/images/projects-6.jpg',
     location: 'BOPHELONG',
     category: 'BUILDING',
     title: 'Bophelong Tiling & Painting',
-    description: 'Construction in Bophelong — tiling and painting works. Contract value: R154,316.10.',
+    description: 'Construction in Bophelong — tiling and painting works.',
     year: 'COMPLETED 2019',
+    value: 'R154,316.10',
   },
 ];
 
@@ -75,20 +81,6 @@ function getCategoryBg(category: string): string {
     <div class="w-[60px] h-[4px] bg-obc-orange lg:absolute lg:bottom-0 lg:left-14"></div>
   </section>
 
-  <!-- Filter Bar -->
-  <div class="bg-obc-cream">
-    <div class="h-[72px] px-6 lg:px-14 flex items-center gap-3">
-      <span class="text-obc-muted text-xs font-semibold tracking-wider shrink-0">FILTER BY:</span>
-      <div class="flex gap-2 overflow-x-auto">
-        <button class="bg-obc-orange text-obc-cream text-xs font-semibold px-4 py-2 cursor-pointer shrink-0">ALL</button>
-        <button class="bg-obc-cream text-obc-body border border-obc-tan text-xs font-semibold px-4 py-2 cursor-pointer shrink-0">GOVERNMENT</button>
-        <button class="bg-obc-cream text-obc-body border border-obc-tan text-xs font-semibold px-4 py-2 cursor-pointer shrink-0">CIVIL WORKS</button>
-        <button class="bg-obc-cream text-obc-body border border-obc-tan text-xs font-semibold px-4 py-2 cursor-pointer shrink-0">BUILDING</button>
-      </div>
-    </div>
-    <div class="h-px bg-obc-tan"></div>
-  </div>
-
   <!-- Projects Grid -->
   <section class="bg-obc-cream px-6 lg:px-14 py-12 flex flex-col gap-5">
     <!-- Header row -->
@@ -105,6 +97,7 @@ function getCategoryBg(category: string): string {
             src={project.img}
             alt={project.title}
             class="h-[200px] w-full object-cover"
+            loading="lazy"
           />
           <div class="p-5 flex flex-col gap-3">
             <!-- Tags -->
@@ -138,6 +131,7 @@ function getCategoryBg(category: string): string {
         src="/images/projects-hero.jpg"
         alt="Outfall Sewer Pipeline Repair Works — Mahikeng"
         class="w-full lg:w-[560px] h-[250px] lg:h-full object-cover flex-shrink-0"
+        loading="lazy"
       />
 
       <!-- Details -->
@@ -155,10 +149,6 @@ function getCategoryBg(category: string): string {
         <!-- Stats row -->
         <div class="flex gap-10 flex-wrap">
           <div class="flex flex-col gap-1">
-            <span class="text-obc-muted text-[10px] tracking-wider font-semibold uppercase">CONTRACT VALUE</span>
-            <span class="font-heading text-obc-tan text-xl">R 1,532,229.98</span>
-          </div>
-          <div class="flex flex-col gap-1">
             <span class="text-obc-muted text-[10px] tracking-wider font-semibold uppercase">DURATION</span>
             <span class="font-heading text-obc-tan text-xl">2025–2026</span>
           </div>
@@ -174,10 +164,6 @@ function getCategoryBg(category: string): string {
           Sub construction of outfall sewer pipeline repair works in Mahikeng, North West province. Project contact: Mr Motati (018 381 1071). Works involve pipeline rehabilitation and repair to municipal sewer infrastructure.
         </p>
 
-        <!-- Button -->
-        <a href="#" class="bg-obc-orange text-obc-cream text-xs font-semibold tracking-wider px-6 py-3 w-fit">
-          VIEW FULL CASE STUDY
-        </a>
       </div>
     </div>
   </section>
@@ -192,7 +178,7 @@ function getCategoryBg(category: string): string {
     <!-- Right -->
     <div class="flex gap-4 flex-wrap justify-center">
       <a href="#" class="bg-obc-cream text-obc-orange text-xs font-semibold tracking-wider px-6 py-3">
-        DOWNLOAD PROFILE
+        REQUEST PROFILE
       </a>
       <a href="/contact" class="border border-obc-cream text-obc-cream text-xs font-semibold tracking-wider px-6 py-3">
         CONTACT US

@@ -18,6 +18,10 @@ import {
   ShieldCheck,
   Layers,
 } from 'lucide-astro';
+import { getImage } from 'astro:assets';
+import heroSrc from '../assets/images/hero.jpg';
+
+const heroImage = await getImage({ src: heroSrc, format: 'webp', quality: 75 });
 ---
 
 <Layout title="Home">
@@ -26,7 +30,7 @@ import {
   <!-- ===== HERO SECTION ===== -->
   <section
     class="relative flex items-center justify-center text-center px-6 min-h-[480px] lg:min-h-[700px]"
-    style="background-image: url('/images/hero.jpg'); background-size: cover; background-position: center;"
+    style={`background-image: url('${heroImage.src}'); background-size: cover; background-position: center;`}
   >
     <!-- Dark overlay -->
     <div class="absolute inset-0 bg-black/60"></div>
@@ -97,6 +101,7 @@ import {
         alt="Construction team at work"
         class="w-full h-full object-cover"
         style="min-height: 300px;"
+        loading="lazy"
       />
     </div>
 
@@ -299,17 +304,18 @@ import {
         <div class="bg-obc-warm overflow-hidden">
           <div class="h-[220px] overflow-hidden">
             <img
-              src="/images/projects-2.jpg"
-              alt="N14 Highway Upgrades"
+              src="/images/projects-1.jpg"
+              alt="Outfall Sewer Pipeline Repair Works"
               class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+              loading="lazy"
             />
           </div>
           <div class="p-5 flex flex-col gap-3">
-            <span class="inline-block bg-obc-dark text-obc-cream text-[10px] font-bold tracking-widest px-3 py-1 uppercase w-fit">
-              GOVERNMENT
+            <span class="inline-block bg-obc-orange text-obc-cream text-[10px] font-bold tracking-widest px-3 py-1 uppercase w-fit">
+              CIVIL WORKS
             </span>
-            <h3 class="font-heading text-obc-dark text-lg">N14 Highway Upgrades</h3>
-            <p class="text-obc-body text-sm">North West Province</p>
+            <h3 class="font-heading text-obc-dark text-lg">Outfall Sewer Pipeline Repair Works</h3>
+            <p class="text-obc-body text-sm">Mahikeng, North West</p>
           </div>
         </div>
 
@@ -317,17 +323,18 @@ import {
         <div class="bg-obc-warm overflow-hidden">
           <div class="h-[220px] overflow-hidden">
             <img
-              src="/images/projects-5.jpg"
-              alt="Sandton Office Complex"
+              src="/images/projects-2.jpg"
+              alt="Mahikeng Veterinary Office Renovations"
               class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+              loading="lazy"
             />
           </div>
           <div class="p-5 flex flex-col gap-3">
-            <span class="inline-block bg-obc-body text-obc-cream text-[10px] font-bold tracking-widest px-3 py-1 uppercase w-fit">
-              PRIVATE
+            <span class="inline-block bg-obc-dark text-obc-cream text-[10px] font-bold tracking-widest px-3 py-1 uppercase w-fit">
+              GOVERNMENT
             </span>
-            <h3 class="font-heading text-obc-dark text-lg">Sandton Office Complex</h3>
-            <p class="text-obc-body text-sm">Johannesburg, Gauteng</p>
+            <h3 class="font-heading text-obc-dark text-lg">Mahikeng Veterinary Office Renovations</h3>
+            <p class="text-obc-body text-sm">Mahikeng, North West</p>
           </div>
         </div>
 
@@ -335,17 +342,18 @@ import {
         <div class="bg-obc-warm overflow-hidden">
           <div class="h-[220px] overflow-hidden">
             <img
-              src="/images/projects-4.jpg"
-              alt="Tshwane Water Infrastructure"
+              src="/images/projects-3.jpg"
+              alt="Ikageng Secondary School Renovation"
               class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+              loading="lazy"
             />
           </div>
           <div class="p-5 flex flex-col gap-3">
             <span class="inline-block bg-obc-orange text-obc-cream text-[10px] font-bold tracking-widest px-3 py-1 uppercase w-fit">
               GOVERNMENT
             </span>
-            <h3 class="font-heading text-obc-dark text-lg">Tshwane Water Infrastructure</h3>
-            <p class="text-obc-body text-sm">Pretoria, Gauteng</p>
+            <h3 class="font-heading text-obc-dark text-lg">Ikageng Secondary School Renovation</h3>
+            <p class="text-obc-body text-sm">Ikageng, North West</p>
           </div>
         </div>
       </div>
@@ -435,7 +443,7 @@ import {
         <Award class="text-obc-orange" size={32} />
         <h3 class="font-heading text-obc-cream text-xl">Established Track Record</h3>
         <p class="text-obc-muted text-[15px] leading-relaxed">
-          Over 15 years of successful project delivery across civil works, building construction, and infrastructure — with more than 120 completed projects to our name.
+          A proven track record of successful project delivery across civil works, building construction, and infrastructure across North West province and beyond.
         </p>
       </div>
 
@@ -532,7 +540,7 @@ import {
         </div>
         <div class="hidden lg:block w-px h-12 bg-obc-divider self-center"></div>
         <div class="flex flex-col items-center gap-1 flex-1 min-w-[120px]">
-          <span class="font-heading text-obc-orange text-5xl">3</span>
+          <span class="font-heading text-obc-orange text-5xl">6</span>
           <span class="text-obc-muted text-xs tracking-wider font-semibold uppercase">CERTIFICATIONS HELD</span>
         </div>
         <div class="hidden lg:block w-px h-12 bg-obc-divider self-center"></div>
